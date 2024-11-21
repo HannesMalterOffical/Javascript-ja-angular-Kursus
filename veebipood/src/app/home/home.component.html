@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div>{{tooted.length}} tk</div>
+
+<button (click)="SorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="SorteeriZA()">Sorteeri Z-A</button>
+<button (click)="SorteeriTahedKasv()">Sorteeri tahemargid kasvavalt</button>
+<button (click)="SorteeriTahedKah()">Sorteeri tahemargid kahanevalt</button>
+<button (click)="SorteeriKolmasTahtAZ()">Sorteeri kolmas taht A-Z</button>
+
+<br><br>
+
+<button (click)="filtreeriKesLoppevadTahegaA()">jata alles 'a' tahega loppevad</button>
+<button (click)="filtreeriTapselt5Tahelised()">jata alles tapselt 5 tahelised</button>
+<button (click)="filtreeriKuniVoiTapselt6Tahelised()">jata alles vaiksem voi vordsed kui 6 tahelised</button>
+<button (click)="filtreeriKesKellelLuhendBE()">jata alles Kellel sonaluhend 'be' sees</button>
+<button (click)="filtreeriKolmasTahtS()">jata alles kellel kolmas taht 's'</button>
+
+@for (toode of tooted; track toode) {
+    <div>{{toode}}</div>
+    <button >Lisa ostukorvi</button>
+}
