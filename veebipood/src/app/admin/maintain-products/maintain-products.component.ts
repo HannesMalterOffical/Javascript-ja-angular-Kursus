@@ -10,13 +10,14 @@ import { ProductService } from '../../services/product.service';
 })                                    // kontrolli eesmargil, et ngOnInit ei muutuks/kaoks
 export class MaintainProductsComponent implements OnInit {
   tooted: string[] = [];
-  
+  esindused: string[] = [];
   // Constructor seob erinevaid faile
   constructor(private productService: ProductService) {}
 
   // ngOnInit kaimaminemise funktsioon ehk kui siia lehele satutakse
   ngOnInit() {
     this.tooted = this.productService.tooted;
+    this.esindused = this.productService.esindused;
   }
 
   kustuta(index: number) {

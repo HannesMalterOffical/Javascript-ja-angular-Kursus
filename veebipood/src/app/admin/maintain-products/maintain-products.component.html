@@ -6,3 +6,8 @@
     <button>Muuda</button>
 }
 
+@for (esindus of esindused; track esindus) {
+    <div>{{esindus}}</div>
+    <button (click)="kustuta($index)">Kustuta</button>
+    <button>Muuda</button>
+}

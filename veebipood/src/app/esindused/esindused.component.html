@@ -1,1 +1,22 @@
-<p>esindused works!</p>
+<div>{{esindused.length}} tk</div>
+
+<button (click)="SorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="SorteeriZA()">Sorteeri Z-A</button>
+<button (click)="SorteeriTahedKasv()">Sorteeri tahemargid kasvavalt</button>
+<button (click)="SorteeriTahedKah()">Sorteeri tahemargid kahanevalt</button>
+<button (click)="SorteeriNeljasTahtAZ()">Sorteeri Neljas taht A-Z</button>
+<button (click)="SorteeriSonadArvuJargi()">Sorteeri sonad arvu jargi</button>
+
+<br><br>
+
+<button (click)="filtreeriKesLoppevadTahegaE()">jata alles 'e' tahega loppevad</button>
+<button (click)="filtreeriTapselt7Tahelised()">jata alles tapselt 7 tahelised</button>
+<button (click)="filtreeriKuniVoiTapselt9Tahelised()">jata alles vaiksem voi vordsed kui 9 tahelised</button>
+<button (click)="filtreeriKesKellelLuhendIs()">jata alles Kellel sonaluhend 'is' sees</button>
+<button (click)="filtreeriNeljasTahtS()">jata alles kellel Neljas taht 's'</button>
+<button (click)="filtreeriPaarisarvTahtiSisaldavad()">paarisarv tähti sisaldavad sonad</button>
+
+@for (esindus of esindused; track esindus) {
+    <div>{{esindus}}</div>
+    <button >Lisa ostukorvi</button>
+}

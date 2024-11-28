@@ -1,1 +1,21 @@
-<p>tootajad works!</p>
+<div> Selles firmas tootab {{tootajad.length}} inimest.</div>
+
+<button (click)="SorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="SorteeriZA()">Sorteeri Z-A</button>
+<button (click)="SorteeriTahedKasv()">Sorteeri tahemargid kasvavalt</button>
+<button (click)="SorteeriTahedKah()">Sorteeri tahemargid kahanevalt</button>
+<button (click)="SorteeriNeljasTahtAZ()">Sorteeri Neljas taht A-Z</button>
+<button (click)="SorteeriSonadArvuJargi()">Sorteeri sonad arvu jargi</button>
+
+<br><br>
+
+<button (click)="filtreeriKesLoppevadTahegaL()">jata alles 'L' tahega loppevad</button>
+<button (click)="filtreeriTapselt5Tahelised()">jata alles tapselt 5 tahelised</button>
+<button (click)="filtreeriKuniVoiTapselt8Tahelised()">jata alles vaiksem voi vordsed kui 8 tahelised</button>
+<button (click)="filtreeriKesKellelLuhendAn()">jata alles Kellel sonaluhend 'AN' sees</button>
+<button (click)="filtreeriKolmasTahtN()">jata alles kellel kolmas taht 'n'</button>
+<button (click)="filtreeriPaarisarvTahtiSisaldavad()">paarisarv tähti sisaldavad sonad</button>
+
+@for (tootaja of tootajad; track tootaja) {
+    <div>{{tootaja}}</div>
+}
