@@ -15,6 +15,12 @@
 <button (click)="filtreeriKolmasTahtS()">jata alles kellel kolmas taht 's'</button>
 
 @for (toode of tooted; track toode) {
-    <div>{{toode}}</div>
-    <button >Lisa ostukorvi</button>
+    <br>
+    <img class="product-image" src={{toode.pilt}} alt="">
+    <!-- <img [src]="toode.pilt" alt=""> -->
+
+    <div>{{toode.nimi}}</div>
+    <div>{{toode.hind}} $</div>
+    <button [disabled]="toode.aktiivne === false" (click)="lisaOstuKorvi(toode)">Lisa ostukorvi</button>
+    <br>
 }

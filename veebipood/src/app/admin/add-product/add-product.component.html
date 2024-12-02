@@ -1,9 +1,18 @@
 <div>{{sonum}}</div>
 
-<label>Toode</label> <br>
-<input [(ngModel)]="lisatavToode" type="text"> <br>
+<label>Toote nimi</label> <br>
+<input [(ngModel)]="lisatavTooteNimi" type="text"> <br>
+<label>Toote Hind</label> <br>
+<input [(ngModel)]="lisatavTooteHind" type="number"> <br>
+<label>Toote Aktiivne</label> <br>
+<input [(ngModel)]="lisatavTootePilt" type="text"> <br>
+<label>Toote Pilt</label> <br>
+<input [(ngModel)]="lisatavTooteAktiivne" type="checkbox"> <br>
 <button (click)="lisaToode()">Lisa toode</button>
 
+<div>Olemasolevad tooted:</div>
+<br>
 @for (toode of tooted; track toode) {
-    <div>{{toode}}</div>
+    
+    <div>{{$index + 1}}. {{toode.nimi}}</div>
 }

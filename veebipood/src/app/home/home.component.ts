@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
+import { Toode } from '../models/Toode';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +13,12 @@ import { ProductService } from '../services/product.service';
 })
 export class HomeComponent implements OnInit {
   // kooloniga maara tuupi, vordusmargiga annan vaartust
-  tooted: string[] = [];
+  tooted: Toode[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,
+    private cartservice: CartService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit() {                              // kustutab ara malukoha
     this.tooted = this.productService.tooted.slice(); 
@@ -20,44 +26,49 @@ export class HomeComponent implements OnInit {
   }
 
   SorteeriAZ() {
-    this.tooted.sort((a, b) => a.localeCompare(b))
+    this.tooted.sort((a, b) => a.nimi.localeCompare(b.nimi))
   }
 
   SorteeriZA() {
-    this.tooted.sort((a, b) => b.localeCompare(a))
+    this.tooted.sort((a, b) => b.nimi.localeCompare(a.nimi))
   }
 
   SorteeriTahedKasv() {
-    this.tooted.sort((a, b) => a.length - b.length)
+    this.tooted.sort((a, b) => a.nimi.length - b.nimi.length)
   }
 
   SorteeriTahedKah() {
-    this.tooted.sort((a, b) => b.length - a.length)
+    this.tooted.sort((a, b) => b.nimi.length - a.nimi.length)
   }
 
   SorteeriKolmasTahtAZ() {      // Bently 012
-    this.tooted.sort((a, b) => a[2].localeCompare(b[2]))
+    this.tooted.sort((a, b) => a.nimi[2].localeCompare(b.nimi[2]))
   }
 
   //FILTER
 
   filtreeriKesLoppevadTahegaA() {
-    this.tooted = this.tooted.filter(toode => toode.endsWith("a"));
+    this.tooted = this.tooted.filter(toode => toode.nimi.endsWith("a"));
   }
 
   filtreeriTapselt5Tahelised() {
-    this.tooted = this.tooted.filter(toode => toode.length === 5);
+    this.tooted = this.tooted.filter(toode => toode.nimi.length === 5);
   }
 
   filtreeriKuniVoiTapselt6Tahelised() {
-    this.tooted = this.tooted.filter(toode => toode.length <= 6);
+    this.tooted = this.tooted.filter(toode => toode.nimi.length <= 6);
   }
 
   filtreeriKesKellelLuhendBE() {
-    this.tooted = this.tooted.filter(toode => toode.toLowerCase().includes("be"));
+    this.tooted = this.tooted.filter(toode => toode.nimi.toLowerCase().includes("be"));
   }
 
   filtreeriKolmasTahtS() {
-    this.tooted = this.tooted.filter(toode => toode[2] === "s");
+    this.tooted = this.tooted.filter(toode => toode.nimi[2] === "s");
+  }
+                      //done: muuda any koht oige tuubi peale
+  lisaOstuKorvi(toode: Toode) {
+    this.cartservice.cart.push(toode);
+    this.toastr.success('Toode lisatud!', toode.nimi);
   }
 }
