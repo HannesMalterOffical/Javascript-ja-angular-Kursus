@@ -20,28 +20,28 @@ export class ProductService {
   // Model teha
   // Kus neid valja kuvan ---> Aadresii tahemarkide kokkuarvutus
   esindused = [
-    'Kristiine',
-    'Ülemiste',
-    'Rocca al mare',
-    'Vesse',
-    'Järveotsa',
-    'Mustamäe',
-    'Viru keskus',
-    'Solaris',
+    {nimi: 'Kristiine', telefon: 98130100, aadress: 'Endla 45, 10615 Tallinn'},
+    {nimi: 'Ülemiste', telefon: 98130100, aadress: 'Suur-Sõjamäe tn 4, 11415 Tallinn'},
+    {nimi: 'Rocca al mare', telefon:98130100, aadress: ' Paldiski mnt 102, 13522 Tallinn'},
+    {nimi: 'Vesse', telefon: 98130100, aadress: 'Vesse 14607-1'},
+    {nimi: 'Järveotsa', telefon: 98130100, aadress: 'Järveotsa tee 35b, Tallinn'},
+    {nimi: 'Mustamäe', telefon: 98130100, aadress: ' A. H. Tammsaare tee 104a, 12918 Tallinn'},
+    {nimi: 'Viru keskus', telefon: 98130100, aadress: ' Viru väljak 4-6, 10111 Tallinn'},
+    {nimi: 'Solaris', telefon: 98130100, aadress: 'Estonia pst 9, 11314 Tallinn'},
   ];
 
   // Tootajad: nimi, ametikoht, tel
   // Model teha
   // Kus neid valja kuvan ---> Aadresii tahemarkide kokkuarvutus
   tootajad = [
-    'Susanna G.',
-    'Timmu',
-    'Onu Aadu',
-    'Joosep F.',
-    'Daniel',
-    'Peeter O. S. Tavamaa',
-    'Tanel P. A.',
-    'Renet O.',
+    {nimi: 'Susanna G.', telefon: 98130100, ametikoht: 'Solaris'},
+    {nimi: 'Timmu', telefon: 98130100, ametikoht: 'Rocca al mare'},
+    {nimi: 'Onu Aadu', telefon: 98130100, ametikoht: 'Vesse'},
+    {nimi: 'Joosep F.', telefon: 98130100, ametikoht: 'Järveotsa'},
+    {nimi: 'Daniel', telefon: 98130100, ametikoht: 'Mustamäe'},
+    {nimi: 'Peeter O. S. Tavamaa', telefon: 98130100, ametikoht: 'Kristiine'},
+    {nimi: 'Tanel P. A.', telefon: 98130100, ametikoht: 'Ülemiste'},
+    {nimi: 'Renet O.', telefon: 98130100, ametikoht: 'Viru keskus'},
   ];
 
   constructor() {}

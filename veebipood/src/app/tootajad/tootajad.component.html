@@ -17,5 +17,8 @@
 <button (click)="filtreeriPaarisarvTahtiSisaldavad()">paarisarv tähti sisaldavad sonad</button>
 
 @for (tootaja of tootajad; track tootaja) {
-    <div>{{tootaja}}</div>
+    <div>{{tootaja.nimi}}</div>
+    <div>{{tootaja.telefon}}</div>
+    <div>{{tootaja.ametikoht}}</div>
+    <br>
 }

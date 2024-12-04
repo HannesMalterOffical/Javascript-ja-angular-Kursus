@@ -17,6 +17,8 @@
 <button (click)="filtreeriPaarisarvTahtiSisaldavad()">paarisarv tähti sisaldavad sonad</button>
 
 @for (esindus of esindused; track esindus) {
-    <div>{{esindus}}</div>
-    <button >Lisa ostukorvi</button>
+    <div>{{esindus.nimi}}</div>
+    <div>{{esindus.telefon}}</div>
+    <div>{{esindus.aadress}}</div>
+    <br>
 }

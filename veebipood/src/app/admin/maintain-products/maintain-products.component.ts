@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Toode } from '../../models/Toode';
+import { Esindus } from '../../models/Esindus';
 
 @Component({
   selector: 'app-maintain-products',
@@ -11,7 +12,7 @@ import { Toode } from '../../models/Toode';
 })                                    // kontrolli eesmargil, et ngOnInit ei muutuks/kaoks
 export class MaintainProductsComponent implements OnInit {
   tooted: Toode[] = [];
-  esindused: string[] = [];
+  esindused: Esindus[] = [];
   // Constructor seob erinevaid faile
   constructor(private productService: ProductService) {}
 
