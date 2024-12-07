@@ -8,7 +8,9 @@
 <input [(ngModel)]="lisatavTootePilt" type="text"> <br>
 <label>Toote Pilt</label> <br>
 <input [(ngModel)]="lisatavTooteAktiivne" type="checkbox"> <br>
-<button (click)="lisaToode()">Lisa toode</button>
+<button [disabled]="lisatavTooteNimi === '' || lisatavTooteHind <= 0 || lisatavTooteHind === null " (click)="lisaToode()">{{"add-product" | translate}}</button>
+
+
 
 <div>Olemasolevad tooted:</div>
 <br>

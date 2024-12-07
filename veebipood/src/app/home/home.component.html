@@ -1,7 +1,7 @@
 <div>{{tooted.length}} tk</div>
 
-<button (click)="SorteeriAZ()">Sorteeri A-Z</button>
-<button (click)="SorteeriZA()">Sorteeri Z-A</button>
+<button (click)="SorteeriAZ()">{{"sort-az" | translate}}</button>
+<button (click)="SorteeriZA()">{{"sort-za" | translate}}</button>
 <button (click)="SorteeriTahedKasv()">Sorteeri tahemargid kasvavalt</button>
 <button (click)="SorteeriTahedKah()">Sorteeri tahemargid kahanevalt</button>
 <button (click)="SorteeriKolmasTahtAZ()">Sorteeri kolmas taht A-Z</button>
@@ -21,6 +21,6 @@
 
     <div>{{toode.nimi}}</div>
     <div>{{toode.hind}} $</div>
-    <button [disabled]="toode.aktiivne === false" (click)="lisaOstuKorvi(toode)">Lisa ostukorvi</button>
+    <button [disabled]="toode.aktiivne === false" (click)="lisaOstuKorvi(toode)">{{"add-to-cart" | translate}}</button>
     <br>
 }

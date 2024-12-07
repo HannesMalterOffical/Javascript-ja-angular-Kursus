@@ -3,11 +3,12 @@ import { ProductService } from '../services/product.service';
 import { CartService } from '../services/cart.service';
 import { Toode } from '../models/Toode';
 import { ToastrService } from 'ngx-toastr';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -68,7 +69,7 @@ export class HomeComponent implements OnInit {
   }
                       //done: muuda any koht oige tuubi peale
   lisaOstuKorvi(toode: Toode) {
-    this.cartservice.cart.push(toode);
+    this.cartservice.addToCart(toode);
     this.toastr.success('Toode lisatud!', toode.nimi);
   }
 }

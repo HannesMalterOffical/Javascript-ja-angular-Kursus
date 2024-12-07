@@ -5,7 +5,27 @@ import { Toode } from '../models/Toode';
   providedIn: 'root'
 })
 export class CartService {
-  cart: Toode[] = [];
+  private cart: Toode[] = JSON.parse(localStorage.getItem('cart') || "[]");
 
   constructor() { }
+
+  getCart() {
+    return this.cart;
+  }
+
+  addToCart(toode: Toode) {
+    this.cart.push(toode);
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+  }
+
+  removeFromCart(index: number) {
+    this.cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+  }
+
+  emptyCart() {
+    this.cart.splice(0);
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+  }
+
 }
