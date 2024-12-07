@@ -40,20 +40,21 @@ export class AppComponent {
 }
 
 
-// ngform 
-// kogus ostukorvis --> keeruline -->objekt objektiks 
-// subject - ostukorvi summa Navbari 
-// URL parameeter 
-// alamkomponendid ja andmete saatmine. dark mode korda teha 
-// pipe 
-// directives HTML-atribuut class="" disabled 
-// kaardirakendus - leaflet / Google maps 
-// E-maili saatmised
-// Api paringud -> tarnija tooted  
-// pakiautomaadid omniva 
-// makse 
-// andmebaas - firebase 
-// Autentimine -> sisselogimine/registeerumine Friebase
+// +ngform 
+// +kogus ostukorvis --> keeruline --> objekt objektiks 
+// +subject - ostukorvi summa Navbari 
+// +E-maili saatmised
+// todo kaardirakendus - leaflet / Google maps 
+// todo URL parameeter 
+// todo Reactive form 
+// todo Api paringud -> tarnija tooted  
+// todo                 pakiautomaadid omniva 
+// todo                 makse 
+// todo andmebaas - firebase 
+// todo alamkomponendid ja andmete saatmine. dark mode korda teha 
+// todo pipe 
+// todo directives HTML-atribuut class="" disabled 
+// todo Autentimine -> sisselogimine/registeerumine Friebase
 
 
 // Mobiilrakendused

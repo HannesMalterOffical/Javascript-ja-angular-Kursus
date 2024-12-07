@@ -4,17 +4,19 @@ import { CartService } from '../services/cart.service';
 import { Toode } from '../models/Toode';
 import { ToastrService } from 'ngx-toastr';
 import { TranslatePipe } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   // kooloniga maara tuupi, vordusmargiga annan vaartust
   tooted: Toode[] = [];
+  otsing = "";
 
   constructor(private productService: ProductService,
     private cartservice: CartService,
@@ -49,27 +51,31 @@ export class HomeComponent implements OnInit {
   //FILTER
 
   filtreeriKesLoppevadTahegaA() {
-    this.tooted = this.tooted.filter(toode => toode.nimi.endsWith("a"));
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi.endsWith("a"));
   }
 
   filtreeriTapselt5Tahelised() {
-    this.tooted = this.tooted.filter(toode => toode.nimi.length === 5);
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi.length === 5);
   }
 
   filtreeriKuniVoiTapselt6Tahelised() {
-    this.tooted = this.tooted.filter(toode => toode.nimi.length <= 6);
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi.length <= 6);
   }
 
   filtreeriKesKellelLuhendBE() {
-    this.tooted = this.tooted.filter(toode => toode.nimi.toLowerCase().includes("be"));
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi.toLowerCase().includes("be"));
   }
 
   filtreeriKolmasTahtS() {
-    this.tooted = this.tooted.filter(toode => toode.nimi[2] === "s");
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi[2] === "s");
   }
                       //done: muuda any koht oige tuubi peale
   lisaOstuKorvi(toode: Toode) {
     this.cartservice.addToCart(toode);
     this.toastr.success('Toode lisatud!', toode.nimi);
+  }
+
+  otsi() {
+    this.tooted = this.productService.tooted.filter(toode => toode.nimi.toLowerCase().includes(this.otsing.toLowerCase()));
   }
 }

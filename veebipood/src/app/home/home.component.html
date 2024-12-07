@@ -13,7 +13,12 @@
 <button (click)="filtreeriKuniVoiTapselt6Tahelised()">jata alles vaiksem voi vordsed kui 6 tahelised</button>
 <button (click)="filtreeriKesKellelLuhendBE()">jata alles Kellel sonaluhend 'be' sees</button>
 <button (click)="filtreeriKolmasTahtS()">jata alles kellel kolmas taht 's'</button>
-
+<br>
+<br>
+<label>Otsi</label>
+<input [(ngModel)]="otsing" (ngModelChange)="otsi()" type="text">
+<!-- <button (click)="otsi()">Otsi</button> -->
+<br>
 @for (toode of tooted; track toode) {
     <br>
     <img class="product-image" src={{toode.pilt}} alt="">

@@ -11,10 +11,7 @@
             <a class="nav-link active" aria-current="page" routerLink="/cart">Ostukorv</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"routerLink="/add-product">Lisa toode</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"routerLink="/maintain-products">Halda tooteid</a>
+            <a class="nav-link"routerLink="/admin">Admin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"routerLink="/gift-cards">Kinkekaardid</a>
@@ -25,9 +22,24 @@
           <li class="nav-item">
             <a class="nav-link"routerLink="/tootajad">Töötajad</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="/contact">Kontakteeru meiega</a>
+          </li>
         </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <img class="icon" (click)="useLanguage('en')" src="/English.png" alt="">
         <img class="icon" (click)="useLanguage('ee')" src="/Estonian.png" alt="">
+        <li class="nav-item">
+          <a class="nav-link"routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="/signup">Sign up</a>
+        </li>
+        <li class="nav-item sum">
+          <img class="icon" src="/shopping-cart.png" alt="">
+          <span>{{summa}}</span>
+        </li>
+      </ul>
       </div>
     </div>
   </nav>
