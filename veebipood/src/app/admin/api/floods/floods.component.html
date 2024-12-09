@@ -1,0 +1,23 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Area name</th>
+            <th>Description</th>
+            <th>Hetkeolukord</th>
+            <th>Sonum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (uleujutus of uleujutused; track uleujutus) {
+        <tr> 
+            <td>{{$index}}</td>
+            <td>{{uleujutus.eaAreaName}}</td>
+            <td>{{uleujutus.description}}</td>
+            <td>{{uleujutus.severity}}</td>
+            <td>{{uleujutus.message}}</td>
+        </tr>
+        }
+   </tbody>
+</table>

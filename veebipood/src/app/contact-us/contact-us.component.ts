@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-
+import { RatingModule } from 'primeng/rating';
 
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [],
+  imports: [RatingModule, FormsModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent {
-  public sendEmail(e: Event) {
+value = 4;	
+
+   sendEmail(e: Event) {
     e.preventDefault();
 
     emailjs
