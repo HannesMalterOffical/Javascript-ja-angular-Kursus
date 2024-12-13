@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { Toode } from '../models/Toode';
 import { OstukorviToode } from '../models/OstukorviToode';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

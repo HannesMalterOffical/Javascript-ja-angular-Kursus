@@ -1,13 +1,14 @@
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { TranslatePipe } from '@ngx-translate/core';
 import { RatingModule } from 'primeng/rating';
 
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [RatingModule, FormsModule],
+  imports: [RatingModule, FormsModule, TranslatePipe],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })

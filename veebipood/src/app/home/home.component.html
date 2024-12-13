@@ -2,20 +2,20 @@
 
 <button (click)="SorteeriAZ()">{{"sort-az" | translate}}</button>
 <button (click)="SorteeriZA()">{{"sort-za" | translate}}</button>
-<button (click)="SorteeriTahedKasv()">Sorteeri tahemargid kasvavalt</button>
-<button (click)="SorteeriTahedKah()">Sorteeri tahemargid kahanevalt</button>
-<button (click)="SorteeriKolmasTahtAZ()">Sorteeri kolmas taht A-Z</button>
+<button (click)="SorteeriTahedKasv()">{{"SortLettersAscend" | translate}}</button>
+<button (click)="SorteeriTahedKah()">{{"SortLettersDescend" | translate}}</button>
+<button (click)="SorteeriKolmasTahtAZ()">{{"SortThirdLetterAZ" | translate}}</button>
 
 <br><br>
 
-<button (click)="filtreeriKesLoppevadTahegaA()">jata alles 'a' tahega loppevad</button>
-<button (click)="filtreeriTapselt5Tahelised()">jata alles tapselt 5 tahelised</button>
-<button (click)="filtreeriKuniVoiTapselt6Tahelised()">jata alles vaiksem voi vordsed kui 6 tahelised</button>
-<button (click)="filtreeriKesKellelLuhendBE()">jata alles Kellel sonaluhend 'be' sees</button>
-<button (click)="filtreeriKolmasTahtS()">jata alles kellel kolmas taht 's'</button>
+<button (click)="filtreeriKesLoppevadTahegaA()">{{"filterEndingWithA" | translate}}</button>
+<button (click)="filtreeriTapselt5Tahelised()">{{"filterExactlyFiveLetters" | translate}}</button>
+<button (click)="filtreeriKuniVoiTapselt6Tahelised()">{{"filterUntilOrExactlySixLetters" | translate}}</button>
+<button (click)="filtreeriKesKellelLuhendBE()">{{"filterWhoBE" | translate}}</button>
+<button (click)="filtreeriKolmasTahtS()">{{"filterThirdLetterS" | translate}}</button>
 <br>
 <br>
-<label>Otsi</label>
+<label>{{"Search" | translate}}</label>
 <input [(ngModel)]="otsing" (ngModelChange)="otsi()" type="text">
 <!-- <button (click)="otsi()">Otsi</button> -->
 <br>

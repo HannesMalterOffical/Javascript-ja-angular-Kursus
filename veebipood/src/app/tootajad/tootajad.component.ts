@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Tootaja } from '../models/Tootaja';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tootajad',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './tootajad.component.html',
   styleUrl: './tootajad.component.css'
 })

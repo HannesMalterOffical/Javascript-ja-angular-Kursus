@@ -1,0 +1,13 @@
+<!-- Templeate driven form #signupForm="ngForm"
+ Reactive form  [formGroup]="profileForm" -->
+<form [formGroup]="profileForm" (submit)="changeProfile()">
+    <label>Email</label> <br>
+    <input formControlName="email" type="text"> <br>
+    <label>{{"Password" | translate}}</label> <br>
+    <input formControlName="parool" type="text"> <br>
+    <label>{{"Firstname" | translate}}</label> <br>
+    <input formControlName="eesNimi" type="text"> <br>
+    <label>{{"Surname" | translate}}</label> <br>
+    <input formControlName="pereNimi" type="text"> <br>
+    <button [disabled]="profileForm.invalid" >{{"Change-profile" | translate}}</button> <br>
+</form>

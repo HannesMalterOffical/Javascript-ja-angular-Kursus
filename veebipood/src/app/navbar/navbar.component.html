@@ -5,35 +5,38 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" routerLink="/">Avalehele</a>
+        <a class="navbar-brand" routerLink="/">{{"Homepage" | translate}}</a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/cart">Ostukorv</a>
+            <a class="nav-link active" aria-current="page" routerLink="/cart">{{"Cart" | translate}}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"routerLink="/admin">Admin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"routerLink="/gift-cards">Kinkekaardid</a>
+            <a class="nav-link"routerLink="/gift-cards">{{"Gift-cards" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"routerLink="/esindused">Esindused</a>
+            <a class="nav-link"routerLink="/esindused">{{"Offices" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"routerLink="/tootajad">Töötajad</a>
+            <a class="nav-link"routerLink="/tootajad">{{"Workers" | translate}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"routerLink="/contact">Kontakteeru meiega</a>
+            <a class="nav-link"routerLink="/contact">{{"Contact-us" | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="/profile">{{"Profile" | translate}}</a>
           </li>
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <img class="icon" (click)="useLanguage('en')" src="/English.png" alt="">
         <img class="icon" (click)="useLanguage('ee')" src="/Estonian.png" alt="">
         <li class="nav-item">
-          <a class="nav-link"routerLink="/login">Login</a>
+          <a class="nav-link"routerLink="/login">{{"Login" | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"routerLink="/signup">Sign up</a>
+          <a class="nav-link"routerLink="/signup">{{"Sign-up" | translate}}</a>
         </li>
         <li class="nav-item sum">
           <img class="icon" src="/shopping-cart.png" alt="">

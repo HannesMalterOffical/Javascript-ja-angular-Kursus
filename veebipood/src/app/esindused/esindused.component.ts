@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Esindus } from '../models/Esindus';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-esindused',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './esindused.component.html',
   styleUrl: './esindused.component.css'
 })

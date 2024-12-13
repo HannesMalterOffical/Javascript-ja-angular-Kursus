@@ -18,6 +18,7 @@ import { SupplierEscuelaComponent } from './admin/api/supplier-escuela/supplier-
 import { RestcountriesComponent } from './admin/api/restcountries/restcountries.component';
 import { FloodsComponent } from './admin/api/floods/floods.component';
 import { ElectricityComponent } from './admin/api/electricity/electricity.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -38,6 +39,7 @@ export const routes: Routes = [
     {path: "rest-countries", component: RestcountriesComponent },
     {path: "floods", component: FloodsComponent },
     {path: "electricity", component: ElectricityComponent },
+    {path: "profile", component: ProfileComponent },
     {path: "**", component: NotFoundComponent}
     
 

@@ -1,9 +1,9 @@
 
 @if (products.length > 0) {
-   <button (click)="tuhjenda()">Tühjenda</button>
+   <button (click)="tuhjenda()">{{"Empty" | translate}}</button>
     <div>Ostukorvis on {{products.length}} toodet</div> 
-}@else {
-    <div>Ostukorv on tühi</div>
+}@else { 
+    <div>{{"Cart-Empty" | translate}}</div>
 }
 
 
@@ -17,5 +17,5 @@
 }
 
 @if (products.length > 0) {
-    <div>Kokku: {{arvutaKokku()}} $</div>
+    <div>{{"Price" | translate}}: {{arvutaKokku()}} $</div>
 }

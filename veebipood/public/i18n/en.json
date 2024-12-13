@@ -2,5 +2,36 @@
     "add-to-cart": "Add to cart",
     "sort-az": "Sort A-Z",
     "sort-za": "Sort Z-A",
-    "add-product": "Add Product"
+    "add-product": "Add Product",
+
+    "Homepage": "Homepage",
+    "Cart": "Cart",
+    "Gift-cards": "Gift-cards",
+    "Offices": "Offices",
+    "Workers": "Workers",
+    "Contact-us": "Contact-us",
+    "Profile": "Profile",
+    "Login": "Login",
+    "Sign-up": "Sign up",
+    "Firstname": "Firstname",
+    "Surname": "Surname",
+    "Change-profile": "Change profile",
+    
+    "SortLettersAscend": "Sort letters ascending",
+    "SortLettersDescend": "Sort letters descending",
+    "SortThirdLetterAZ": "Sort third Letter A-Z",
+
+    "filterEndingWithA": "Filter ending with A",
+    "filterExactlyFiveLetters": "Filter exactly with five letters",
+    "filterUntilOrExactlySixLetters": "Filter until or exactly with six letters",
+    "filterWhoBE": "Filter who has BE in the word",
+    "filterThirdLetterS": "Filter third letter S",
+
+    "Search": "Search",
+    "Password": "Password",
+
+    "Empty": "Empty",
+    "Price": "Full Price",
+    "Cart-Empty": "Cart is Empty",
+    "Message": "Message"
 }

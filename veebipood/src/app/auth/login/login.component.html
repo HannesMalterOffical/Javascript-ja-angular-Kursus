@@ -1,7 +1,7 @@
 <form #loginForm="ngForm" (submit)="login(loginForm)">
     <label>Email</label> <br>
     <input ngModel name="email" type="text"> <br>
-    <label>Parool</label> <br>
+    <label>{{"Password" | translate}}</label> <br>
     <input ngModel name="parool" type="text"> <br>
-    <button>Logi sisse</button> <br>
+    <button>{{"Login" | translate}} </button> <br>
 </form>

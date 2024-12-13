@@ -2,5 +2,36 @@
     "add-to-cart": "lisa ostukorvi",
     "sort-az": "Sorteeri A-Z",
     "sort-za": "Sorteeri Z-A",
-    "add-product": "Lisa toode"
+    "add-product": "Lisa toode",
+
+    "Homepage": "Avaleht",
+    "Cart": "Ostukorv",
+    "Gift-cards": "Kinkekaardid",
+    "Offices": "Esindused",
+    "Workers": "Töötajad",
+    "Contact-us": "Kontakteeru meiega",
+    "Profile": "Profiil",
+    "Login": "Logi sisse",
+    "Sign-up": "Registreeru",
+    "Firstname": "Eesnimi",
+    "Surname": "Perenimi",
+    "Change-profile": "Muuda profiili",
+
+    "SortLettersAscend": "Sorteeri tahed kasvavalt",
+    "SortLettersDescend": "Sorteeri tahed kahanevalt",
+    "SortThirdLetterAZ": "Sorteeri kolmas taht A-Z",
+
+    "filterEndingWithA": "Filteeri loppevad A-ga",
+    "filterExactlyFiveLetters": "Filteeri tapselt viie tahega",
+    "filterUntilOrExactlySixLetters": "Filteeri tapselt voi kuni kuue tahega",
+    "filterWhoBE": "Filteeri kellel on BE luhend",
+    "filterThirdLetterS": "Filteeri kolmas taht S",
+
+    "Search": "Otsi",
+    "Password": "Parool",
+
+    "Empty": "Tühjenda",
+    "Price": "Kokku",
+    "Cart Empty": "Ostukorv on tühi",
+    "Message": "Kiri"
 }
