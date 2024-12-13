@@ -19,6 +19,8 @@ import { RestcountriesComponent } from './admin/api/restcountries/restcountries.
 import { FloodsComponent } from './admin/api/floods/floods.component';
 import { ElectricityComponent } from './admin/api/electricity/electricity.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UksToodeComponent } from './uks-toode/uks-toode.component';
+import { MuudaToodeComponent } from './admin/muuda-toode/muuda-toode.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -40,6 +42,12 @@ export const routes: Routes = [
     {path: "floods", component: FloodsComponent },
     {path: "electricity", component: ElectricityComponent },
     {path: "profile", component: ProfileComponent },
+    {path: "toode/:nimi", component: UksToodeComponent },
+    // uks esindus --> Esindused
+    // ukstootaja --> Tootajad
+    {path: "muuda-toode/:index", component: MuudaToodeComponent },
+    // MuudaEsindus --> HaldaEsindused
+    // MuudaTootaja --> HaldaTottajad
     {path: "**", component: NotFoundComponent}
     
 

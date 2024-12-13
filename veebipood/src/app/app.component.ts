@@ -58,12 +58,12 @@ export class AppComponent {
 //* https://environment.data.gov.uk/flood-monitoring/id/floods KOOS
 //? https://api.itbook.store/1.0/search/angular 
 //? https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/all-vehicles-model/record
-// todo kaardirakendus - leaflet / Google maps 
-// todo URL parameeter 
-// todo Reactive form 
+//* todo kaardirakendus - leaflet / Google maps 
+//* todo URL parameeter 
+//* todo Reactive form 
+// todo pipe 
 // todo andmebaas - firebase 
 // todo alamkomponendid ja andmete saatmine. dark mode korda teha 
-// todo pipe 
 // todo directives HTML-atribuut class="" disabled 
 // todo Autentimine -> sisselogimine/registeerumine Friebase
 
@@ -71,8 +71,7 @@ export class AppComponent {
 // Mobiilrakendused
 // Back-end -> Spring/Java
 
-// L 7.12
-// T 10.12
-// R 13.12
+// E 16.12
+// R 19.12
 
  // KOKKU 15 kohtumist

@@ -1,5 +1,7 @@
 export type Esindus = {
     nimi: string,
     telefon: number,
-    aadress: string
+    aadress: string,
+    xCoord: number,
+    yCoord: number
 }

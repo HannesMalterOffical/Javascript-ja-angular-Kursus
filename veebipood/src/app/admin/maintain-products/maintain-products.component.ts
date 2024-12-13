@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Toode } from '../../models/Toode';
 import { Esindus } from '../../models/Esindus';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-maintain-products',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './maintain-products.component.html',
   styleUrl: './maintain-products.component.css'
 })                                    // kontrolli eesmargil, et ngOnInit ei muutuks/kaoks
